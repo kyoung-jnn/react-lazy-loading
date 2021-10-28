@@ -1,0 +1,12 @@
+.lazyWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 1024px;
+}
+
+.lazyContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1024px;
+}

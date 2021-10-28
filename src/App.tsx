@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from '@src/pages/Home';
-import '@src/App.scss';
+import 'normalize.css';
 
 const App: React.FC = () => <Home />;
 

@@ -20,7 +20,6 @@ module.exports = merge(baseWebpackConfig, {
     rules: [
       {
         test: /\.s?css?$/,
-        exclude: /node_module/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
