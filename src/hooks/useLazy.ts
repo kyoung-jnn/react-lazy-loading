@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 const useLazy = () => {
+  // elements에 <img/>를 담음.
   const [elements, setElements] = useState<Element[]>([]);
 
   const handleLazyLoading = useCallback(
@@ -24,7 +25,7 @@ const useLazy = () => {
     [],
   );
 
-  // img element가 저장되면 Intersection Observer 설정 시작
+  // <img/>가 저장되면 Intersection Observer 설정 시작
   useEffect(() => {
     const option = {
       root: null,
