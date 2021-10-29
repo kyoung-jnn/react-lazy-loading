@@ -16,7 +16,6 @@ module.exports = merge(baseWebpackConfig, {
     rules: [
       {
         test: /\.s?css?$/,
-        exclude: /node_module/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],

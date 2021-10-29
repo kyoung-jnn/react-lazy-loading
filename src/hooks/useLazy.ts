@@ -16,7 +16,7 @@ const useLazy = () => {
 
           lazyImageElement.classList.remove('lazy');
 
-          // 로딩이 완료되었으므로 옵저버 해제
+          // 로딩이 완료 되었으므로 옵저버 해제
           observer.unobserve(lazyImageElement);
         }
       });
@@ -30,17 +30,17 @@ const useLazy = () => {
       root: null,
       threshold: 0.25,
     };
-    let observer: IntersectionObserver;
+    let lazyObserver: IntersectionObserver;
 
     if (elements.length) {
-      observer = new IntersectionObserver(handleLazyLoading, option);
+      lazyObserver = new IntersectionObserver(handleLazyLoading, option);
 
       elements.forEach((element: Element) => {
-        observer.observe(element);
+        lazyObserver.observe(element);
       });
     }
 
-    return () => observer && observer.disconnect();
+    return () => lazyObserver && lazyObserver.disconnect();
   }, [elements]);
 
   return { setElements };
