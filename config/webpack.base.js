@@ -38,5 +38,9 @@ module.exports = {
       },
     ],
   },
-  plugins: [new dotenv()], // env 설정
+  plugins: [
+    new dotenv({
+      systemvars: true,
+    }),
+  ],
 };
